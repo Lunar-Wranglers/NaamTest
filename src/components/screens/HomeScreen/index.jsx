@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Card from '../../shared/Card'
 import Paginator from '../../shared/Paginator'
 import './homescreen.css'
-import services from '../../shared/images/data.js'
+import services from '../../shared/data/data.js'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 

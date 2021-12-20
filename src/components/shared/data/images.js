@@ -1,13 +1,13 @@
-import apply from './ApplyIcon.png'
-import applyLive from './ApplyLive.png'
-import contact from './ContactIcon.png'
-import contactLive from './ContactLive.png'
-import home from './HomeIcon.jpg'
-import homeLive from './HomeLive.png'
-import info from './InfoIcon.png'
-import infoLive from './InfoLive.png'
-import profile from './ProfileIcon.png'
-import profileLive from './ProfileLive.png'
+import apply from '../images/ApplyIcon.png'
+import applyLive from '../images/ApplyLive.png'
+import contact from '../images/ContactIcon.png'
+import contactLive from '../images/ContactLive.png'
+import home from '../images/HomeIcon.jpg'
+import homeLive from '../images/HomeLive.png'
+import info from '../images/InfoIcon.png'
+import infoLive from '../images/InfoLive.png'
+import profile from '../images/ProfileIcon.png'
+import profileLive from '../images/ProfileLive.png'
 
 const icons = [
   {

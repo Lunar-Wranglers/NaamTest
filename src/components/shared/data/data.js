@@ -1,7 +1,7 @@
-import dataApply from './dataApply.png'
-import dataInfo from './dataInfo.png'
-import dataLocate from './dataLocation.png'
-import dataNH from './dataNH.png'
+import dataApply from '../images/dataApply.png'
+import dataInfo from '../images/dataInfo.png'
+import dataLocate from '../images/dataLocation.png'
+import dataNH from '../images/dataNH.png'
 
 const services = [
   {

@@ -4,16 +4,32 @@ import { useFormik } from 'formik'
 import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import authSlice from '../../../../store/slices/auth'
 
 export default function Login() {
   const [message, setMessage] = useState("")
   const [loading, setLoading] = useState(false)
   const dispatch = useDispatch()
-  const history = useHistory()
+  const history = useNavigate()
   
   const handleLogin = (email: string, password: string) => {
-    //
-  }
+      axios
+        .post(`${process.env.REACT_APP_API_URL}/auth/login/`, { email, password })
+        .then((res) => {
+          dispatch(
+            authSlice.actions.setAuthTokens({
+              token: res.data.access,
+              refreshToken: res.data.refresh,
+            })
+          );
+          dispatch(authSlice.actions.setAccount(res.data.user));
+          setLoading(false);
+          history.push("/");
+        })
+        .catch((err) => {
+          setMessage(err.response.data.detail.toString());
+        });
+    };
   
   const formik = useFormik({
     initialValues: {

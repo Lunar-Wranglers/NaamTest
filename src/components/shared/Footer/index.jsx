@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './footer.css'
-import icons from '../images/images.js'
+import icons from '../data/images.js'
 
 export default function Footer(props) {
   

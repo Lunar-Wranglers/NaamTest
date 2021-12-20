@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import store, { persistor } from './store'
 import { PersistGate } from 'redux-persist/integration/react'
 import Layout from './components/shared/Layout'
@@ -17,12 +17,12 @@ function App(props) {
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>
         <Layout id='layout'>
-          <Routes>
+          <Switch>
             <Route path='/' element={<HomeScreen />} />
             <Route path='/newUser' element={<NewUser />} />
             <Route path='/login' element={<Login />} />
             <ProtectedRoute path='/profile' elements={<Profile />} />
-          </Routes>
+          </Switch>
         </Layout>
       </PersistGate>
     </Provider>

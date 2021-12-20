@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router'
 import authSlice from '../../../store/slices/auth'
 import useSWR from 'swr'
 import { fetcher } from '../../../utils/axios.ts'

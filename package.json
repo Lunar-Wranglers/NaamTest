@@ -55,15 +55,15 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "9",
-    "postcss": "7",
+    "autoprefixer": "^9",
+    "postcss": "^7",
     "prettier": "2.3.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "resolutions": {
-    "autoprefixer": "^9",
+    "autoprefixer": "^10.0.2",
     "postcss": "^8.2.14",
     "prettier": "^2.3.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "^3.0.7"
   }
 }

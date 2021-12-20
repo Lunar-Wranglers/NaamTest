@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/shared/Layout'
+import HomeScreen from './components/screens/HomeScreen'
+import NewUser from './components/screens/auth/NewUser'
+import Login from './components/screens/auth/Login/index.tsx'
 import './App.css';
 
-function App() {
+function App(props) {
+  {/* const [user, setUser]
+  constructor (props) {
+    super(props)
+    this.state = {
+      user: null,
+      msgAlerts: []
+    }
+  }
+
+  setUser = user => this.setState({ user })
+
+  clearUser = () => this.setState({ user: null }) */}
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout id='layout'>
+      <Routes>
+        <Route path='/' element={<HomeScreen />} />
+        <Route path='/NewUser' element={<NewUser />} />
+        <Route path='/Login' element={<Login />} />
+      </Routes>
+    </Layout>
   );
 }
 

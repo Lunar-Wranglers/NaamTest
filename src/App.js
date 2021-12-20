@@ -4,28 +4,18 @@ import Layout from './components/shared/Layout'
 import HomeScreen from './components/screens/HomeScreen'
 import NewUser from './components/screens/auth/NewUser'
 import Login from './components/screens/auth/Login/index.tsx'
+import Profile from './components/screens/Profile'
 import './App.css';
 
 function App(props) {
-  {/* const [user, setUser]
-  constructor (props) {
-    super(props)
-    this.state = {
-      user: null,
-      msgAlerts: []
-    }
-  }
-
-  setUser = user => this.setState({ user })
-
-  clearUser = () => this.setState({ user: null }) */}
   
   return (
     <Layout id='layout'>
       <Routes>
         <Route path='/' element={<HomeScreen />} />
-        <Route path='/NewUser' element={<NewUser />} />
-        <Route path='/Login' element={<Login />} />
+        <Route path='/newUser' element={<NewUser />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/profile' elements={<Profile />} />
       </Routes>
     </Layout>
   );
